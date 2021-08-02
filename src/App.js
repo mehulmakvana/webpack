@@ -8,9 +8,9 @@ import { connect } from 'react-redux';
 import { HomePage } from './HomePage';
 import { LoginPage } from "./LoginPage";
 import { RegisterPage } from "./RegisterPage";
-import Navbar from './Navbar';
+// import Navbar from './Navbar';
 import Contact from './Contact/Contact';
-import Home from './Home/Home';
+// import Home from './Home/Home';
 import Footer from './Footer/Footer';
 
 
@@ -19,11 +19,15 @@ class App extends React.Component {
     constructor(props) {
         super(props);
 
+
         history.listen((location, action) => {
             // clear alert on location change
             this.props.clearAlerts();
         });
     };
+
+
+
     render() {
         const { alert } = this.props;
         return (
@@ -31,8 +35,9 @@ class App extends React.Component {
 
 
                 <Router history={history}>
-                    <Navbar />
-             
+                    {/* <Navbar /> */}
+                    <br />
+
                     <div className="container">
                         <div className="col-sm-8 col-sm-offset-2">
                             {alert.message &&
@@ -40,12 +45,11 @@ class App extends React.Component {
                             }
                         </div>
                     </div>
-             
-                    <Switch>
 
-                        <PrivateRoute exact path="/" component={HomePage} />
-                        <Route path="/home" component={Home} />
+                    <Switch>
+                        <PrivateRoute Route exact path="/" component={HomePage} />
                         <Route path="/login" component={LoginPage} />
+                        {/* <Route path="/home" component={Home} /> */}
                         <Route path="/register" component={RegisterPage} />
                         <Route path="/contact" component={Contact} />
 
@@ -53,7 +57,7 @@ class App extends React.Component {
                         <Redirect from="*" to="/" />
                     </Switch>
                 </Router>
-                
+
                 <Footer />
             </div>
         );
