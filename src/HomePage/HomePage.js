@@ -5,7 +5,7 @@ import { userActions } from '../actions';
 import Home from "../Home/Home";
 import { Header } from '../Header/Header';
 class HomePage extends React.Component {
-        
+
 
     componentDidMount() {
         this.props.getUsers();
@@ -15,16 +15,16 @@ class HomePage extends React.Component {
         return (e) => this.props.deleteUser(id);
     }
 
-   
+
 
     render() {
         const { user, users } = this.props;
-        
+
 
         return (
             <div>
-              
-<Header/>
+
+                <Header />
 
                 <section className="about_section layout_padding">
                     <div className="container">
