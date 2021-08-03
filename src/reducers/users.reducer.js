@@ -1,9 +1,7 @@
-import { userConstants } from '../constants/user.constants';
+import { userConstants } from '../constants';
 
 export function users(state = {}, action) {
-
   switch (action.type) {
-
     case userConstants.GETALL_REQUEST:
       return {
         loading: true
@@ -51,3 +49,4 @@ export function users(state = {}, action) {
   }
 }
 
+export default users.reducer;

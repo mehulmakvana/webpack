@@ -1,7 +1,7 @@
-import { userConstants } from '../constants/user.constants';
-import { userService } from '../services/user.service';
 import { alertActions } from './alert.actions';
 import { history } from '../helpers/history';
+import { userConstants } from '../constants';
+import { userService } from '../services';
 
 export const userActions = {
     login,
@@ -94,3 +94,7 @@ function _delete(id) {
     function failure(id, error) { return { type: userConstants.DELETE_FAILURE, id, error } }
 }
 
+export const isLoggedIn = () => {
+    console.log(localStorage.getItem('user'));
+    return localStorage.getItem('user')? true : false;
+}

@@ -1,9 +1,7 @@
 const path = require('path');
-const loader = require('sass-loader');
 const MiniCssExtraPlugin = require('mini-css-extract-plugin');
 
 module.exports = {
-    mode: 'development',
     output: {
 
         path: path.join(__dirname, '/dist'),

@@ -1,22 +1,19 @@
 import React from 'react';
-import { Link, Redirect } from 'react-router-dom';
 import { connect } from 'react-redux';
-
-import { userActions } from '../actions/user.actions';
+import { userActions , isLoggedIn} from '../actions/user.actions';
+import {history} from '../helpers';
 
 class LoginPage extends React.Component {
     constructor(props) {
         super(props);
 
-       
-
         // reset login status
-        this.props.logout();
+        // this.props.logout();
 
         this.state = {
             username: '',
             password: '',
-            submitted: false
+            submitted: false,
         };
 
         this.handleChange = this.handleChange.bind(this);
@@ -24,8 +21,15 @@ class LoginPage extends React.Component {
 
     }
 
+    componentDidMount(){
+        if (isLoggedIn()) {
+            history.push('/');
+        }
+        else {
+            this.props.logout();
+        }
+    }
 
-    
     handleChange(e) {
         const { name, value } = e.target;
         this.setState({ [name]: value });
@@ -34,27 +38,24 @@ class LoginPage extends React.Component {
     handleSubmit(e) {
         e.preventDefault();
 
-        
+        this.setState({ submitted: true });
+
+
         const { username, password } = this.state;
-        if (username && password) {
-            this.props.login(username, password);
-            localStorage.setItem("token" ,"fake-jwt-token")
-            this.setState({ submitted: true });
-        }
+        this.props.login(username, password);
+
+
     }
 
     nextPath(path) {
         this.props.history.push(path);
-      }
+    }
+
+
 
     render() {
         const { loggingIn } = this.props;
         const { username, password, submitted } = this.state;
-
-        if(this.state.submitted){
-            return <Redirect to="/contact" />
-        }
-
 
         return (
 
@@ -72,14 +73,14 @@ class LoginPage extends React.Component {
                                     <form name="form" onSubmit={this.handleSubmit}>
                                         <div className={'form-group' + (submitted && !username ? ' has-error' : '')}>
                                             <label htmlFor="username">Username</label>
-                                            <input type="text" placeholder="Enter Your Username" name="username" value={username} onChange={this.handleChange}/>
+                                            <input type="text" placeholder="Enter Your Username" name="username" value={username} onChange={this.handleChange} />
                                             {submitted && !username &&
                                                 <div className="help-block">Username is required</div>
                                             }
                                         </div>
                                         <div className={'form-group' + (submitted && !password ? ' has-error' : '')}>
                                             <label htmlFor="password">Password</label>
-                                            <input type="password" placeholder="Enter Your Password" name="password" value={password} onChange={this.handleChange}/>
+                                            <input type="password" placeholder="Enter Your Password" name="password" value={password} onChange={this.handleChange} />
                                             {submitted && !password &&
                                                 <div className="help-block">Password is required</div>
                                             }

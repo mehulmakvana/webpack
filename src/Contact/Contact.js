@@ -1,39 +1,14 @@
 import React, { Component } from 'react';
-import Navbar from '../Navbar';
-import { Link, Redirect } from 'react-router-dom';
-
-
+import { Header } from '../Header/Header';
 
 class Contact extends Component {
 
-    constructor(props) {
-
-        super(props)
-        const token = localStorage.getItem("token")
-
-        let submitted = true
-        if (token == null) {
-            submitted = false
-        }
-
-        this.state = {
-            submitted
-        }
-
-    }
-
-
     render() {
-
-        if (this.state.submitted === false) {
-            return <Redirect to="/login" />
-        }
 
         return (
             <div>
 
-                <Navbar />
-
+                <Header />
                 <section class="contact_section layout_padding">
                     <div class="container">
                         <div class="heading_container">
@@ -85,15 +60,6 @@ class Contact extends Component {
     }
 }
 
+
+
 export default Contact;
-
-
-
-
-
-
-
-
-
-
-
