@@ -39,7 +39,11 @@
     "sass-loader": "^12.1.0",
     "style-loader": "^3.2.1"
 
+  },
+  "devDependencies": {
+    
+  
+   
   }
- 
 }
 
