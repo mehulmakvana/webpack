@@ -1,4 +1,3 @@
-var assets = require('assets')
 var path = require('path');
 var express = require('express');
 
