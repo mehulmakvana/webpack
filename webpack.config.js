@@ -11,7 +11,7 @@ module.exports = {
     },
 
     devServer: {
-        port: 3000,
+        // port: 3003,
         // watchContentBase: true,
         historyApiFallback: true
     },
@@ -42,12 +42,12 @@ module.exports = {
         ]
     },
 
-    externals: {
-        // global app config object
-        config: JSON.stringify({
-            apiUrl: 'http://localhost:3000'
-        })
-    },
+    // externals: {
+    //     // global app config object
+    //     config: JSON.stringify({
+    //         apiUrl: 'http://localhost:3003'
+    //     })
+    // },
 
     plugins:[new MiniCssExtraPlugin()],
 };
