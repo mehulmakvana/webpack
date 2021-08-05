@@ -35,7 +35,7 @@ class HomePage extends React.Component {
                             <div className="col-md-6 px-0">
                                 <div className="img_container">
                                     <div className="img-box">
-                                        <img src="images/user.jpeg" alt="" />
+                                        <img src="assets/images/user.jpeg" alt="" />
                                     </div>
 
                                 </div>

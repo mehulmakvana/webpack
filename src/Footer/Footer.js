@@ -12,7 +12,7 @@ export class Footer extends Component {
                             <div class="col-md-3">
                                 <div class="info_logo">
                                     <a class="navbar-brand" href="index.html">
-                                        <img src="images/info-logo.png" alt="" />
+                                        <img src="assets/images/info-logo.png" alt="" />
                                         <span>
                                             Victory
                                         </span>
@@ -64,16 +64,16 @@ export class Footer extends Component {
                                     </form>
                                     <div class="social_box">
                                         <a href="">
-                                            <img src="images/fb.png" alt="" />
+                                            <img src="assets/images/fb.png" alt="" />
                                         </a>
                                         <a href="">
-                                            <img src="images/twitter.png" alt="" />
+                                            <img src="assets/images/twitter.png" alt="" />
                                         </a>
                                         <a href="">
-                                            <img src="images/linkedin.png" alt="" />
+                                            <img src="assets/images/linkedin.png" alt="" />
                                         </a>
                                         <a href="">
-                                            <img src="images/instagram.png" alt="" />
+                                            <img src="assets/images/instagram.png" alt="" />
                                         </a>
                                     </div>
                                 </div>

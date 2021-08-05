@@ -39,7 +39,7 @@ export class Home extends Component {
                                         </div>
                                         <div className="col-md-5">
                                             <div className="img-box">
-                                                <img src="images/p1.jpeg" alt="" />
+                                                <img src="assets/images/p1.jpeg" alt="" />
                                             </div>
                                         </div>
                                     </div>
@@ -69,7 +69,7 @@ export class Home extends Component {
                                         </div>
                                         <div className="col-md-5">
                                             <div className="img-box">
-                                                <img src="images/p2.jpeg" alt="" />
+                                                <img src="assets/images/p2.jpeg" alt="" />
                                             </div>
                                         </div>
                                     </div>
@@ -100,7 +100,7 @@ export class Home extends Component {
                                         </div>
                                         <div className="col-md-5">
                                             <div className="img-box">
-                                                <img src="images/p3.jpeg" alt="" />
+                                                <img src="assets/images/p3.jpeg" alt="" />
                                             </div>
                                         </div>
                                     </div>
@@ -134,7 +134,7 @@ export class Home extends Component {
                                         </div>
                                         <div className="col-md-5">
                                             <div className="img-box">
-                                                <img src="images/p4.jpeg" alt="" />
+                                                <img src="assets/images/p4.jpeg" alt="" />
                                             </div>
                                         </div>
                                     </div>
