@@ -1,5 +1,6 @@
 var path = require('path');
 var express = require('express');
+var fallback = require('express-history-api-fallback')
 
 
 var app = express();
@@ -7,6 +8,7 @@ var app = express();
 app.use(express.static(path.join(__dirname, 'dist')));
 app.use(express.static(path.join(__dirname, 'assets')));
 
+app.use(fallback(__dirname + '/dist'))
 
 
 app.set('port', process.env.PORT || 8080);
