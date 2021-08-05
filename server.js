@@ -12,7 +12,7 @@ var root = __dirname + '/dist'
 app.use(express.static(root))
 app.use(fallback('index.html', { root: root }))
 
-app.set('port', process.env.PORT || 8080);
+app.set('port', process.env.PORT || 7000);
 
 
 
