@@ -7,7 +7,7 @@ var app = express();
 
 app.use(express.static(path.join(__dirname, 'assets')));
 
-var app = connect.createServer().use(connect.static(__dirname + '/dist'));
+app = connect.use(connect.static(__dirname + '/dist'));
 
 app.set('port', process.env.PORT || 8080);
 
