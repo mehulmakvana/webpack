@@ -5,7 +5,6 @@ var app = express();
 
 app.use(express.static(path.join(__dirname, 'dist')));
 app.use(express.static(path.join(__dirname, 'assets')));
-app.use(express.static(path.join(__dirname, 'App')));
 
 
 app.set('port', process.env.PORT || 8080);
