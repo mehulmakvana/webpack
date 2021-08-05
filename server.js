@@ -12,10 +12,10 @@ var root = __dirname + '/dist'
 app.use(express.static(root))
 app.use(fallback('index.html', { root: root }))
 
-// app.set('port', process.env.PORT || 7000);
+app.set('port', process.env.PORT || 7000);
 
 
 
-// var server = app.listen(app.get('port'), function() {
-//   console.log('http://localhost:',server.address().port);
-// });
+var server = app.listen(app.get('port'), function() {
+  console.log('http://localhost:7000',server.address().port);
+});
