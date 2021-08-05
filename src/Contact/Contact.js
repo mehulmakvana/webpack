@@ -45,7 +45,7 @@ class Contact extends Component {
                                 </div>
                                 <div class="col-md-6">
                                     <div class="img-box">
-                                        <img src="images/map.png" alt="" />
+                                        <img src="assets/images/map.png" alt="" />
                                     </div>
                                 </div>
                             </div>

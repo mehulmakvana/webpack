@@ -11,7 +11,7 @@ module.exports = {
     },
 
     devServer: {
-        port: 3003,
+        port: 8080,
         // watchContentBase: true,
         historyApiFallback: true
     },
@@ -45,7 +45,7 @@ module.exports = {
     externals: {
         // global app config object
         config: JSON.stringify({
-            apiUrl: 'http://localhost:3003'
+            apiUrl: 'http://localhost:8080'
         })
     },
 
