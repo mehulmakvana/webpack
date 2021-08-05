@@ -7,5 +7,5 @@ app.use(express.static(path.join(__dirname, 'dist')));
 app.set('port', process.env.PORT || 8080);
 
 var server = app.listen(app.get('port'), function() {
-  console.log('http://localhost: ', server.address().port);
+  console.log('http://localhost:',server.address().port);
 });
